@@ -17,7 +17,7 @@ E: (examples, sometimes you can have more than one base case)
 For n === 0: []
 For n === 1: ["r", "p", "s"]
 For n === 2: [ 'rr', 'rp', 'rs', 'pr', 'pp', 'ps', 'sr', 'sp', 'ss' ] // the pattern starts at this point
-For n === 3: ["rr" + "r", "rr + "p", "rr" + "s", "rp" + "r", "rp" + "p", "rp" + "s" ... "pp + "p",..."pr" + "r"]
+For n === 3: ["rr" + "r", "rr" + "p", "rr" + "s", "rp" + "r", "rp" + "p", "rp" + "s" ... "pp + "p",..."pr" + "r"]
 
 General Plan:
 Questions:
@@ -63,5 +63,6 @@ var rockPaperScissorsPermutations = function(rounds){
 console.log(rockPaperScissorsPermutations(0)) // should yield []
 console.log(rockPaperScissorsPermutations(1)) // should yield ['r', 'p', 's']
 console.log(rockPaperScissorsPermutations(2)) // should yield ["rr", "rp", "rs", "pr", "pp", "ps", "sr", "sp", "ss"]
+console.log(rockPaperScissorsPermutations(3).length) // should yield ["rrr", "rrs", "rrp", "rpr", "rpp", "rps", "rsr", "rsp", "rss"...same for all "p" and "s" patterns; total 27 strings]
 //other possible solution
 //var rockPaperScissorsPermutation=r=(p,s='')=>p--?r(p,s+'r').concat(r(p,s+'p'),r(p,s+'s')):s?[s]:[]
